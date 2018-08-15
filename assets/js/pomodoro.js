@@ -102,12 +102,12 @@ function progress() {
   //depending on period call appropriate clock generator
   if (activity === "session") {
     clock = sessionClock();
-    header.style.color = "#e03e3e";
     header.style.transitionDuration = (sessionLength * 60).toString() + "s"; //session length in 'mins' converted to 'secs'
+    header.style.color = "#e03e3e";
   } else {
     clock = breakClock();
-    header.style.color = "#4682b4";
     header.style.transitionDuration = (breakLength * 60).toString() + "s"; //session length in 'mins' converted to 'secs'
+    header.style.color = "#4682b4";
   }
 
   //if clock is resuming from pause state
